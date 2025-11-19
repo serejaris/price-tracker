@@ -377,24 +377,6 @@ export default function App() {
             </div>
           </div>
 
-          <div className="mb-6">
-            <label className="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-2">
-              Цвет карточки
-            </label>
-            <div className="flex gap-3 flex-wrap">
-              {COLORS.map((c) => (
-                <button
-                  key={c.name}
-                  type="button"
-                  onClick={() => setFormData({ ...formData, color: c.class })}
-                  className={`w-8 h-8 rounded-full ${c.class} transition-transform hover:scale-110 ${
-                    formData.color === c.class ? 'ring-2 ring-offset-2 ring-slate-400 scale-110' : ''
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-
           <button
             type="submit"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-blue-500/30 transition-all active:scale-95 flex justify-center items-center gap-2"
